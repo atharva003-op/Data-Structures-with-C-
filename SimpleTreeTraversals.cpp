@@ -13,31 +13,31 @@ class Node {
     }
 };
 
-void inorder(Node* node) {
-    if (node == nullptr) {
+void inorder(Node* root) {
+    if (root == nullptr) {
         return;
     }
-    inorder(node->left);
-    std::cout <<node->data<<" ";
-    inorder(node->right);
+    inorder(root->left);
+    std::cout <<root->data<<" ";
+    inorder(root->right);
 }
 
-void preorder (Node* node) {
-    if (node == nullptr) {
+void preorder (Node* root) {
+    if (root == nullptr) {
         return;
     }
-    std::cout <<node->data<<" ";
-    preorder(node->left);
-    preorder(node->right);
+    std::cout <<root->data<<" ";
+    preorder(root->left);
+    preorder(root->right);
 }
 
-void postorder (Node* node) {
-    if (node == nullptr) {
+void postorder (Node* root) {
+    if (root == nullptr) {
         return;
     }
-    postorder(node->left);
-    postorder(node->right);
-    std::cout <<node->data<<" ";
+    postorder(root->left);
+    postorder(root->right);
+    std::cout <<root->data<<" ";
 }
 
 int main () {
@@ -78,8 +78,6 @@ int main () {
         }
 
     } while (choice != 4);
-
-    
 
     return 0;
 }
